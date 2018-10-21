@@ -18,6 +18,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "C:\\ws\\pypro\\ubuntu1604", "/vagrant_data"
 
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
